@@ -1,0 +1,159 @@
+body{
+  margin: 10px;
+}
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+$nbColumns: 12;
+$margin: 20px;
+$nb-margin:20;
+$nb-padding:20;
+$font-size:40;
+$border-radius:20;
+$box-shadow:10;
+$shadow-color: grey;
+
+
+
+
+.columns{
+  overflow: hidden;
+  > div{
+    margin-right: - $margin;
+    display: flex;
+    flex-wrap: wrap;
+    > *{
+      flex-grow: 1;
+      margin-bottom: $margin;
+      margin-right: $margin
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 480px){
+  @for $i from 1 through 12{
+    .col-phone-#{$i}{
+      flex-basis: calc(100% / #{$nbColumns} * #{$i} - #{$margin});
+    }
+  }
+}
+
+@media (max-width: 768px){
+  @for $i from 1 through 12{
+    .col-pad-#{$i}{
+      flex-basis: calc(100% / #{$nbColumns} * #{$i} - #{$margin});
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  @for $i from 1 through 12{
+    .col-laptop-#{$i}{
+      flex-basis: calc(100% / #{$nbColumns} * #{$i} - #{$margin});
+    }
+  }
+}
+
+@media (max-width: 2560px){
+  @for $i from 1 through 12{
+    .col-monitor-#{$i}{
+      flex-basis: calc(100% / #{$nbColumns} * #{$i} - #{$margin});
+    }
+  }
+}
+
+
+@for $i from 0 through $nb-margin{
+  .m-#{$i}{
+    margin:#{$i}rem;}
+
+  .m-t-#{$i}{
+    margin-top:#{$i}rem;}
+
+  .m-r-#{$i}{
+    margin-right:#{$i}rem;}
+
+  .m-b-#{$i}{
+    margin-bottom:#{$i}rem;}
+
+  .m-l-#{$i}{
+    margin-left:#{$i}rem;}
+  }
+
+
+
+  @for $i from 0 through $nb-padding{
+    .p-#{$i}{
+      padding:#{$i}rem;}
+
+    .p-t-#{$i}{
+      padding-top:#{$i}rem;}
+
+    .p-r-#{$i}{
+      padding-right:#{$i}rem;}
+
+    .p-b-#{$i}{
+      padding-bottom:#{$i}rem;}
+
+    .p-l-#{$i}{
+      padding-left:#{$i}rem;}
+    }
+
+.reset-style-link{
+  text-decoration: none;
+}
+
+
+  @for $i from 0 through $font-size{
+    .f-s-#{$i}{
+    font-size:$i/10 em;}
+  }
+
+
+  @for $i from 0 through $border-radius{
+    .b-r-#{$i}{
+      border-radius: #{$i}px;}
+  }
+
+  @for $i from 0 through $border-radius{
+    .b-r-#{$i}{
+      border-radius: #{$i}px;}
+  }
+
+
+  @for $i from 0 through $border-radius{
+    .b-r-tl-#{$i}{
+      border-top-left-radius: #{$i}px;}
+  }
+
+
+  @for $i from 0 through $border-radius{
+    .b-r-tr-#{$i}{
+      border-top-right-radius: #{$i}px;}
+  }
+
+  @for $i from 0 through $border-radius{
+    .b-r-br-#{$i}{
+      border-bottom-right-radius: #{$i}px;}
+  }
+
+
+  @for $i from 0 through $border-radius{
+    .b-r-bl-#{$i}{
+      border-bottom-left-radius: #{$i}px;}
+  }
+
+
+  @for $i from 0 through $box-shadow{
+    .shadow-#{$i}{
+      box-shadow: #{$i}px #{$i}px 10px #{$shadow-color};
+    }
+  }
