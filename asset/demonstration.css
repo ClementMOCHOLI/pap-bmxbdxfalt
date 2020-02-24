@@ -59,6 +59,12 @@ ul{
   margin-right: 15%;
 }
 
+.container>img{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 .sponsor>img{
   width: 15%;
   height: auto;
