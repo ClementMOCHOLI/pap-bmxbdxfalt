@@ -23,7 +23,16 @@ ul{
  color: black;
 }
 
-.left_nav>li>img{
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover{
+  border: solid 1px white;
+}
+
+.left_nav>li>a>img{
   width: 15em;
   height: auto;
 }
