@@ -62,6 +62,10 @@ ul{
   margin-right: 25%;
 }
 
+h1{
+  text-align: center;
+}
+
 .container>p{
   width: 70%;;
   margin-left: 15%;
